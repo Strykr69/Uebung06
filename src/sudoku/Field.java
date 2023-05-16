@@ -23,13 +23,18 @@ public class Field {
         this.domain = new HashSet<Value>();
     }
 
-    public List<Field> getDependents() {
-        return this.dependents;
-    }
+// TODO
+//    public List<Field> getDependents() {
+//        if(this.dependents.isEmpty()){
+//            for(Field field : Sudoku)
+//            this.dependents.addAll()
+//        }
+//    }
 
-    public Set<Value> getDomain() {
-        return this.domain;
-    }
+// TODO
+//    public Set<Value> getDomain() {
+//        return this.domain;
+//    }
 
     public int getSpalte() {
         return this.Spalte;
@@ -61,6 +66,7 @@ public class Field {
 
     @Override
     public String toString() {
-        return super.toString();
+        if(isEmpty()) return ".";
+        else return this.value.toString();
     }
 }
