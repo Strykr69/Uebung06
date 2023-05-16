@@ -26,8 +26,8 @@ public class Field {
 // TODO
 //    public List<Field> getDependents() {
 //        if(this.dependents.isEmpty()){
-//            for(Field field : Sudoku)
-//            this.dependents.addAll()
+//            for(int g = 0; g < 9; g++)
+//            this.dependents.addAll();
 //        }
 //    }
 

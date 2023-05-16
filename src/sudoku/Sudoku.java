@@ -9,7 +9,14 @@ public class Sudoku {
     public Sudoku(){
     }
 
-//TODO
+    public int getDimension() {
+        return dimension;
+    }
+
+    public Field getField(int x, int y) {
+        return board[x][y];
+    }
+
     @Override
     public String toString() {
         for(int o = 0; o < dimension; o++){
@@ -17,12 +24,12 @@ public class Sudoku {
             for(int p = 0; p < dimension; p++){
                 s.append(board[o][p].toString());
                 s.append(" ");
-                if((p+1)%3==0 && p != dimension-1){
+                if((p)%3==2 && p != dimension-1){
                     s.append("| ");
                 }
             }
             System.out.println(s);
-            if((o+1)%3==0 && o != dimension-1) System.out.println("------+-------+------");
+            if((o)%3==2 && o != dimension-1) System.out.println("------+-------+------");
         }
         return ("");
     }
