@@ -1,10 +1,8 @@
 package sudoku;
 import sudoku.SudokuApp.Value;
-import static java.lang.Math.sqrt;
 
 public class Sudoku {
     private Field[][] board;
-    private int dimension;
 
     public Sudoku(){
     }
@@ -35,7 +33,7 @@ public class Sudoku {
         this.board = new Field[9][9];
         for(int j = 0; j < 9; j++){
             for(int k = 0; k < 9; k++){
-                Field tempField = new Field(k,j);
+                Field tempField = new Field(k,j,this.board);
                 tempField.setValue(Value.of(values[(j * 9 + k)]));
                 board[j][k] = tempField;
             }
