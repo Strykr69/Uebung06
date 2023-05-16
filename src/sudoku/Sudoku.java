@@ -31,7 +31,7 @@ public class Sudoku {
     }
 
     public void initialize(int... values){
-        if(sqrt(values.length)!=9) throw new RuntimeException("BOARD DOES NOT CONTAIN ENOUGH INTEGERS");
+        if(values.length!=81) throw new RuntimeException("BOARD DOES NOT CONTAIN ENOUGH INTEGERS");
         this.board = new Field[9][9];
         for(int j = 0; j < 9; j++){
             for(int k = 0; k < 9; k++){
