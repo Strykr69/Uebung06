@@ -23,16 +23,16 @@ public class SudokuApp {
         NINE(9,"9");
 
         public final int id;
-        public final String label;
+//        public final String label;
 
         private Value(int id, String label){
             this.id = id;
-            this.label = label;
+//            this.label = label;
         }
 
         @Override
         public String toString() {
-            return this.label;
+            return String.valueOf(id);
         }
 
         public static Value of(int id) {
